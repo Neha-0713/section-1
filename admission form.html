@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>student admission form</h1>
+    <form>
+
+        <label>full name</label>
+        <input type="text" required minlength="4">
+        <br>
+        <br>
+
+        <label>email address</label>
+        <input type="email">
+        <br>
+        <br>
+        <label>date of birth</label>
+        <input type="date">
+        <br>
+        <br>
+        <label>gender</label>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <br>
+        <br>
+
+        <labels>select course</labels>
+        <select>
+           <option >mern stack</option>
+           <option >ai</option>
+           <option >data analytics</option>
+           <option >python</option>
+        </select>
+
+        <label>select college</label>
+        <input type="text" list="college">
+        <datalist id="college">
+            <option>srmu</option>
+            <option>bbd</option>
+            <option>integral</option>
+            <option>amity</option>
+        </datalist>
+
+        <label>address</label>
+        <textarea rows="4" cols="4">
+        
+        </textarea>
+        <br><br>
+        <input type="checkbox">
+        <label>i accept terms and conditions</label>
+        <br><br>
+
+        <details>
+            <summary>view terms and conditions</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quaerat debitis ducimus <mark>cupiditate reiciendis voluptatem</mark> cupiditate reiciendis voluptatem rerum eveniet nostrum sunt modi temporibus porro natus dolores provident distinctio necessitatibus laudantium excepturi id.</p>
+        </details>
+        <br> <br>
+
+
+
+        <button>submit</button>
+    </form>
+</body>
+</html>
