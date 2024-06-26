@@ -105,26 +105,30 @@
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    height: 20vh;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .footer-section {
-    flex: 1;
+    display: block;
     margin: 10px;
-    min-width: 250px;
-    padding: 0 10px;
+    
+    padding: 20px 10px;
 }
 
 .footer-section h3 {
+    text-align: center;
     margin-bottom: 15px;
     font-size: 18px;
+
 }
 
 .footer-section p {
+    text-align: center;
     margin: 0;
     font-size: 14px;
 }
@@ -141,6 +145,16 @@
 .footer-bottom {
     margin-top: 20px;
     font-size: 14px;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+}
+.icons h3{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+
 }
 .service{
     
@@ -177,8 +191,70 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    
 
 
+}
+.section-contact{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    background-color: var(--theme-color)
+    
+
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.contact-form h3{
+    align-self: flex-start;
+    font-size: 35px;
+    margin-left: 150px;
+    color: var(--theme-color-dark);
+    font-weight: bold;
+    
+}
+.label{
+    display: block;
+    padding-left: 10px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+    width: 60%;
+    border: none;
+    border: 2px solid;
+    border-color: var(--theme-color-dark)
+    
+    
+    
+}
+.submit-btn{
+    margin-top: 10px;
+    background-color: var(--theme-color-dark);
+    align-self: flex-start;
+    
+    margin-left: 155px;
+    
+}
+
+.fa-solid{
+    position: absolute;
+    left:53%;
+}
+.section-contact{
+    position: relative;
+}
+#icon1{
+    left:52%;
+    top:28%;
 }
 
 
@@ -283,6 +359,27 @@
 
         </section>
 
+        <section class="section-contact">
+            
+            <div class="contact-img">
+                <img style="width: 150%;" src="contact us4.webp" alt="">
+            </div>
+            <div class="contact-form">
+                <h3>Leave us a Message!</h3>
+                
+                <textarea placeholder="Name" class="label"></textarea>
+            
+                
+                
+                <textarea placeholder="Email" class="label"></textarea>
+                
+                <textarea placeholder="Phone no" class="label"></textarea>
+                <textarea placeholder="Enter your message " class="label" rows="3"></textarea>
+                <button class="btn btn-main submit-btn">Submit</button>
+            </div>
+
+        </section>
+
 
 
        </article>
@@ -293,7 +390,7 @@
             <div class="footer-container">
                 <div class="footer-section">
                     <h3>About Us</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque voluptatem aperiam odio facilis veniam!</p>
+                    <p>Lorem, ipsum dolor sit amet  <br>consectetur adipisicing elit. Repellendus doloremque <br>voluptatem aperiam odio facilis veniam!</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
@@ -302,11 +399,11 @@
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
-                    
+                    <div class="icons">
                         <i class="fa-brands fa-instagram fa-2x"></i>
                         <i class="fa-brands fa-twitter fa-2x"></i>
                         <i class="fa-brands fa-facebook fa-2x"></i>
-                    
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">

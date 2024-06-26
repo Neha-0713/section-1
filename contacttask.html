@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #e74c3c;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            display: flex;
+            width: 700px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            background: #d63031;
+            color: white;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .left h2 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+        .right {
+            background: white;
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .right h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 0.9em;
+            color: #d63031;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .terms {
+            font-size: 0.8em;
+            color: #999;
+        }
+        .btn {
+            background: #d63031;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .nav-buttons button {
+            background: transparent;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn1{
+            position: absolute;
+            height:50px;
+            font-weight: bold;
+            color:white;
+            font-size: 18px;
+            width:50px;
+            background-color: #d63031;
+            border:none;
+            border-radius: 50px;
+            left:48%;
+            top:48%;
+        }
+        .nav-buttons button.active {
+            background: #d63031;
+            color: white;
+        }
+        .arrow {
+            font-size: 2em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Sign Up</h2>
+            <span class="arrow">&rarr;</span>
+        </div>
+        <div class="right">
+            <div class="nav-buttons">
+                <button class="active">SIGN UP</button>
+                <button>LOGIN</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="fullname">FULL NAME</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <button class="btn1">></button>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms" class="terms">I agree all statement in <a href="#">terms of service</a></label>
+                </div>
+                <button type="submit" class="btn">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
