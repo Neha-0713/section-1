@@ -14,5 +14,31 @@ console.log(fruits.indexOf('Mango'));
 fruits.splice(0,1)
 console.log(fruits);
 
+const nums=[36,19,10,2,6,13,49];
+for(let i=0;i<nums.length;i++){
+    console.log(nums[i]);
+}
+console.log('..........');
+for(let n of nums){
+    console.log(n);
+}
+
+console.log('.......using for each funcction.......');
+nums.forEach((a,i)=>{console.log(a,i);});  //first parameter gives the element and the second gives the index third gives the array itself
+
+console.log('.....sq of each element....');
+for(let n of nums){
+    console.log(n*n);
+}
+
+//create a new array containing only even numbers
+const evenNums=[];
+nums.forEach((n)=>{
+    if(n%2==0){
+        evenNums.push(n)
+    }
+}
+);
+console.log(evenNums);
 
 
