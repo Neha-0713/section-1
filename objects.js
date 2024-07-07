@@ -51,10 +51,17 @@ const smartphoneArray=[
     ram:['6GB','8GB']
 },
     {
+    brand:'Apple',
+    model:'Iphone 15',
+    price:59999,
+    colors:['red','green','blue'],
+    ram:['6GB','8GB']
+},
+    {
     brand:'Mi',
     model:'Poco X2',
     price:16000,
-    colors:[,'gray','black'],
+    colors:['gray','black'],
     ram:['16GB','4GB']
 },
     {
@@ -63,6 +70,13 @@ const smartphoneArray=[
     price:110000,
     colors:['silver','gold','black'],
     ram:['32GB','8GB']
+},
+    {
+    brand:'Samsung',
+    model:'a50',
+    price:110000,
+    colors:['gold','black'],
+    ram:['8GB','16GB']
 },
     {
     brand:'OnePlus',
@@ -94,6 +108,64 @@ console.log(brand);
 //4.filter all smartphones containing white color
 const white=smartphoneArray.filter((a)=>{return (a.colors.includes('white'))})
 console.log(white);
+
+//5.filter all apple smartphone
+const keyword='Apple';
+const applephones=smartphoneArray.filter((a)=>{return a.brand.toLowerCase()===keyword.toLowerCase()})
+console.log(applephones);
+
+const applephones2=smartphoneArray.filter((a)=>{return a.brand.toLowerCase().includes(keyword.toLowerCase())});
+console.log(applephones2);
+
+const brands = smartphoneArray.map((phone) => { return phone.brand });
+console.log(new Set(brands));
+
+console.log(Array.from(new Set(brands)));
+console.log(Array.from('APPLE'));
+
+[
+    '1. Apple Iphone 16 - 79999',
+    '2. Apple Iphone 15 - 59999',
+    '3. MI Poco X2 - 16000',
+    '4. Samsung s24 ultra - 110000',
+    '5. Samsung a50 - 21999',
+    '6. OnePlus 12R - 36000',
+    '7. Motorola Edge50 - 24000'
+]
+
+let [Brand, model, price] = ['Apple', 'Iphone 16', 79999];
+
+console.log(brand + ' ' + model + ' - ' + price);
+console.log(`${brand} ${model} - ${price}`);
+
+const phoneNames =
+    smartphoneArray.map((phone, index) => { return `${index + 1}. ${phone.brand} ${phone.model} - ₹${phone.price}` });
+
+console.log(phoneNames);
+
+[
+    'Apple Iphone 16 - white',
+    'Apple Iphone 16 - green',
+    'Apple Iphone 16 - black',
+    'Apple Iphone 15 - red',
+    'Apple Iphone 15 - green',
+    'Apple Iphone 15 - blue',
+    'MI Poco X2 - gray',
+    'MI Poco X2 - black',
+    'Samsung s24 ultra - silver',
+    'Samsung s24 ultra - gold',
+    'Samsung a50 - white',
+    'Samsung a50 - black',
+    'OnePlus 12R - blue',
+    'OnePlus 12R - pink'
+]
+
+const allColorPhones =
+    smartphoneArray.map((phone) => { return phone.colors.map((c) => { return `${phone.brand} ${phone.model} (${c})` }) });
+
+
+console.log( ['a', 'b', 'c'].includes('d') );	console.log(allColorPhones.flat());
+
 
 
 
